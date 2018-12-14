@@ -69,8 +69,25 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       },
     },
   ];
+  // if (preProcessor) {
+  //   loaders.push(require.resolve(preProcessor));
+  // }
   if (preProcessor) {
-    loaders.push(require.resolve(preProcessor));
+    let loader = require.resolve(preProcessor)
+    if (preProcessor === "less-loader") {
+      loader = {
+        loader,
+        options: {
+          modifyVars: {
+            'primary-color': '#000000',
+            'link-color': '#1DA57A',
+            'border-radius-base': '2px',
+          },
+          javascriptEnabled: true,
+        }
+      }
+    }
+    loaders.push(loader);
   }
   return loaders;
 };
