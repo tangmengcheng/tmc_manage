@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './index.less';
+import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
+import {Button} from 'antd';
 
 class App extends Component {
   render() {
@@ -17,7 +20,8 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            <p className="text t">Learn React</p>
+            <Button>Antd</Button>
           </a>
         </header>
       </div>
