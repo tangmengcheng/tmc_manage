@@ -1,5 +1,6 @@
 
 .header {
+    background-color: #ffffff;
     .header-top {
         height: 60px;
         line-height: 60px;
@@ -17,6 +18,16 @@
         border-color: #f9c700;
         .breadcrumb-title {
             text-align: center;
+            font-size: 18px;
+            &:after {
+                position: absolute;
+                content: '';
+                left: 73px;
+                top: 39px;
+                border-top: 9px solid #fff;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent; 
+            }
         }
         .weather {
             text-align: right;
