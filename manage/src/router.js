@@ -39,6 +39,9 @@ import Common from './common.js';
 // user
 import User from './pages/user/index.js';
 
+// map
+import BikeMap from './pages/map/bikeMap.js';
+
 import NoMatch from './pages/nomatch/index.js';
 
 export default class IRouter extends Component {
@@ -73,6 +76,7 @@ export default class IRouter extends Component {
                                 <Route path="/admin/city" component={City}></Route>
                                 <Route path="/admin/order" component={Order} />
                                 <Route path="/admin/user" component={User}></Route>
+                                <Route path="/admin/bikeMap" component={BikeMap}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
