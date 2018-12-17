@@ -26,6 +26,9 @@ import HighTable from './pages/table/highTable.js';
 // richText
 import RichText from './pages/rich/index.js';
 
+// city
+import City from './pages/city/index.js';
+
 import NoMatch from './pages/nomatch/index.js';
 
 export default class IRouter extends Component {
@@ -52,6 +55,7 @@ export default class IRouter extends Component {
                                 <Route path="/admin/table/basic" component={BasicTable}></Route>
                                 <Route path="/admin/table/high" component={HighTable}></Route>
                                 <Route path="/admin/rich" component={RichText}></Route>
+                                <Route path="/admin/city" component={City}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
