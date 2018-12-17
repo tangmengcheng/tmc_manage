@@ -36,6 +36,9 @@ import OrderDetail from './pages/order/detail.js';
 // common
 import Common from './common.js';
 
+// user
+import User from './pages/user/index.js';
+
 import NoMatch from './pages/nomatch/index.js';
 
 export default class IRouter extends Component {
@@ -69,6 +72,7 @@ export default class IRouter extends Component {
                                 <Route path="/admin/rich" component={RichText}></Route>
                                 <Route path="/admin/city" component={City}></Route>
                                 <Route path="/admin/order" component={Order} />
+                                <Route path="/admin/user" component={User}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
