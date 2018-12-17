@@ -20,6 +20,9 @@ import FormLogin from './pages/form/login.js';
 import FormRegistery from './pages/form/register.js';
 import NoMatch from './pages/nomatch/index.js';
 
+// table
+import BasicTable from './pages/table/basicTable.js';
+
 export default class IRouter extends Component {
 
     render() {
@@ -41,6 +44,7 @@ export default class IRouter extends Component {
                                 <Route path="/admin/ui/carousel" component={Carousels}></Route>
                                 <Route path="/admin/form/login" component={FormLogin}></Route>
                                 <Route path="/admin/form/reg" component={FormRegistery}></Route>
+                                <Route path="/admin/table/basic" component={BasicTable}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
