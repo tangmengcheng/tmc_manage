@@ -1,8 +1,36 @@
 import Jsonp from 'jsonp';
 import axios from 'axios';
 import { Modal } from 'antd';
+import Util from '../util/util.js';
 
 export default class Axios {
+
+    // 封装通用请求列表
+    static requestList(that, url, params, isMock) {
+        var data = {
+            params: params,
+            isMock
+        }
+        this.ajax({
+            url,
+            data
+        }).then((data) => {
+            if(data && data.result) {
+                let list = data.result.item_list.map((item, index) => {
+                    item.key = index;
+                    return item;
+                })
+                that.setState({
+                    list,
+                    pagination: Util.pagination(data, (current) => {
+                        that.params.page = current;
+                        that.requestList();
+                    })
+                })
+            }
+        })
+    }
+
     static jsonp(options) {
         return new Promise((resolve, reject) => {
             Jsonp(options.url, {
@@ -23,7 +51,15 @@ export default class Axios {
             loading = document.getElementById('ajaxLoading');
             loading.style.display = 'block';
         }
-        let baseApi = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
+        let baseApi = '';
+        if(options.isMock) {
+            // 使用Mock数据
+            baseApi = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
+        } else {
+            // 调真实接口
+            baseApi = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
+        }
+        
         return new Promise((resolve,reject)=>{
             axios({
                 url:options.url,

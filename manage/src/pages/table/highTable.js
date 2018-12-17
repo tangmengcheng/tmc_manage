@@ -200,83 +200,46 @@ export default class HighTable extends Component {
                 key: 'birthday',
                 width: 120,
                 dataIndex: 'birthday'
+            },{
+                title: '生日',
+                key: 'birthday',
+                width: 120,
+                dataIndex: 'birthday'
+            },{
+                title: '生日',
+                key: 'birthday',
+                width: 120,
+                dataIndex: 'birthday'
+            },{
+                title: '生日',
+                key: 'birthday',
+                width: 120,
+                dataIndex: 'birthday'
+            },{
+                title: '生日',
+                key: 'birthday',
+                width: 120,
+                dataIndex: 'birthday'
             },
             {
                 title: '生日',
                 key: 'birthday',
                 width: 120,
                 dataIndex: 'birthday'
-            }, {
+            },
+            {
                 title: '生日',
                 key: 'birthday',
                 width: 120,
                 dataIndex: 'birthday'
-            }, {
+            },
+            {
                 title: '生日',
                 key: 'birthday',
                 width: 120,
                 dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
-                title: '生日',
-                key: 'birthday',
-                width: 120,
-                dataIndex: 'birthday'
-            }, {
+            },
+            {
                 title: '生日',
                 key: 'birthday',
                 width: 120,
@@ -456,7 +419,7 @@ export default class HighTable extends Component {
                         columns={columns2}
                         dataSource={this.state.dataSource}
                         pagination={false}
-                        scroll={{ x: 2650 }}
+                        scroll={{ x: 1600 }}
                     />
                 </Card>
                 <Card title="表格排序" style={{margin: '10px 0'}}>

@@ -1,4 +1,20 @@
+@import './loading.less';
 
+body {
+    background: #f1f3f5;
+    font-family: "Helvetica Neue For Number", "PingFang SC Light", "Heiti SC", "San Francisco", "Helvetica", Arial, sans-serif;
+}
+ul,li{
+list-style: none;
+}
+.clearfix{
+    &:after{
+        content:" ";
+        clear:both;
+        display:block;
+        visibility:hidden;
+    }
+}
 .container {
     display: flex;
     .nav-left {

@@ -29,6 +29,13 @@ import RichText from './pages/rich/index.js';
 // city
 import City from './pages/city/index.js';
 
+// order
+import Order from './pages/order/index.js'
+import OrderDetail from './pages/order/detail.js';
+
+// common
+import Common from './common.js';
+
 import NoMatch from './pages/nomatch/index.js';
 
 export default class IRouter extends Component {
@@ -39,6 +46,11 @@ export default class IRouter extends Component {
                 <App>
                     <Route path="/login" component={Login}/>
                     {/* <Route path="/admin" component={Admin}/> */}
+                    <Route path="/common" render={() =>
+                        <Common>
+                            <Route path="/common/order/detail/:orderId" component={OrderDetail} />
+                        </Common>
+                    }/>
                     <Route path="/admin" render={() => 
                         <Admin>
                             <Switch>
@@ -56,6 +68,7 @@ export default class IRouter extends Component {
                                 <Route path="/admin/table/high" component={HighTable}></Route>
                                 <Route path="/admin/rich" component={RichText}></Route>
                                 <Route path="/admin/city" component={City}></Route>
+                                <Route path="/admin/order" component={Order} />
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
