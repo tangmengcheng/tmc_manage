@@ -47,6 +47,9 @@ import Bar from './pages/echarts/bar/index.js';
 import Line from './pages/echarts/line/index.js';
 import Pie from './pages/echarts/pie/index.js';
 
+// permission
+import Permission from './pages/permission/index.js';
+
 import NoMatch from './pages/nomatch/index.js';
 
 export default class IRouter extends Component {
@@ -85,6 +88,7 @@ export default class IRouter extends Component {
                                 <Route path="/admin/charts/bar" component={Bar}></Route>
                                 <Route path="/admin/charts/line" component={Line}></Route>
                                 <Route path="/admin/charts/pie" component={Pie}></Route>
+                                <Route path="/admin/permission" component={Permission}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
