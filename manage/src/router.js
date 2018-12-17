@@ -42,6 +42,11 @@ import User from './pages/user/index.js';
 // map
 import BikeMap from './pages/map/bikeMap.js';
 
+// echarts
+import Bar from './pages/echarts/bar/index.js';
+import Line from './pages/echarts/line/index.js';
+import Pie from './pages/echarts/pie/index.js';
+
 import NoMatch from './pages/nomatch/index.js';
 
 export default class IRouter extends Component {
@@ -77,6 +82,9 @@ export default class IRouter extends Component {
                                 <Route path="/admin/order" component={Order} />
                                 <Route path="/admin/user" component={User}></Route>
                                 <Route path="/admin/bikeMap" component={BikeMap}></Route>
+                                <Route path="/admin/charts/bar" component={Bar}></Route>
+                                <Route path="/admin/charts/line" component={Line}></Route>
+                                <Route path="/admin/charts/pie" component={Pie}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
