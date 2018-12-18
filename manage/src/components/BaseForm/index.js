@@ -26,8 +26,8 @@ class FilterForm extends Component {
                 let placeholder = item.placeholder;
                 let placeholder1 = item.placeholder1;
                 let width = item.width;
-                if (item.type == '时间查询'){
-                    const begin_time = <FormItem label="订单时间" key={field}>
+                if (item.type === '时间查询'){
+                    const begin_time = <FormItem label="订单时间" key={Math.random()}>
                         {
                             getFieldDecorator('begin_time')(
                                 <DatePicker showTime={true} placeholder={placeholder} format="YYYY-MM-DD HH:mm:ss"/>
@@ -35,7 +35,7 @@ class FilterForm extends Component {
                         }
                     </FormItem>;
                     formItemList.push(begin_time)
-                    const end_time = <FormItem label="~" colon={false} key={field}>
+                    const end_time = <FormItem label="~" colon={false} key={Math.random()}>
                         {
                             getFieldDecorator('end_time')(
                                 <DatePicker showTime={true} placeholder={placeholder1} format="YYYY-MM-DD HH:mm:ss" />
@@ -44,7 +44,7 @@ class FilterForm extends Component {
                     </FormItem>;
                     formItemList.push(end_time)
                 }else if(item.type === 'INPUT'){
-                    const INPUT = <FormItem label={label} key={field}>
+                    const INPUT = <FormItem label={label} key={Math.random()}>
                         {
                             getFieldDecorator([field],{
                                 initialValue: initialValue
@@ -55,7 +55,7 @@ class FilterForm extends Component {
                     </FormItem>;
                     formItemList.push(INPUT)
                 } else if (item.type === 'SELECT') {
-                    const SELECT = <FormItem label={label} key={field}>
+                    const SELECT = <FormItem label={label} key={Math.random()}>
                         {
                             getFieldDecorator([field], {
                                 initialValue: initialValue
@@ -71,7 +71,7 @@ class FilterForm extends Component {
                     </FormItem>;
                     formItemList.push(SELECT)
                 } else if (item.type === 'CHECKBOX') {
-                    const CHECKBOX = <FormItem label={label} key={field}>
+                    const CHECKBOX = <FormItem label={label} key={Math.random()}>
                         {
                             getFieldDecorator([field], {
                                 valuePropName: 'checked',

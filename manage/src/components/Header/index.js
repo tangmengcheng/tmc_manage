@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import { Row, Col } from 'antd';
+import { connect } from 'react-redux';
 import './index.less';
 import Util from './../../util/util.js';
 import axios from './../../axios/index.js';
 
-export default class Header extends Component {
+
+class Header extends Component {
 
     state = {}
     componentWillMount() {
@@ -68,3 +70,10 @@ export default class Header extends Component {
         )
     }
 }
+// 从redux中获取值
+const mapStateToProps = state => {
+    return {
+        menuName: state.menuName
+    }
+}
+export default connect(mapStateToProps)(Header)
