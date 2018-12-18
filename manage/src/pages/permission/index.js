@@ -22,7 +22,7 @@ export default class Order extends Component {
                 params:{}
             }
         }).then((res)=>{
-            if(res.code == 0){
+            if(res.code === 0){
                 let list  = res.result.item_list.map((item,i)=>{
                     item.key = i;
                     return item;
@@ -82,7 +82,7 @@ export default class Order extends Component {
                     title: dataSource[i].user_name,
                     status: dataSource[i].status,
                 };
-                if (data.status == 1) {
+                if (data.status === 1) {
                     targetKeys.push(data.key);
                 }
                 mockData.push(data);
@@ -93,6 +93,7 @@ export default class Order extends Component {
 
     // 设置权限
     handlePermission = ()=>{
+        console.log(this.state.selectedItem)
         if (!this.state.selectedItem) {
             Modal.info({
                 title: '信息',
@@ -188,7 +189,7 @@ export default class Order extends Component {
                 title: '使用状态',
                 dataIndex: 'status',
                 render(status){
-                    if (status == 1) {
+                    if (status === 1) {
                         return "启用"
                     } else {
                         return "停用"
@@ -318,6 +319,7 @@ class PermEditForm extends Component {
     state = {};
     // 设置选中的节点，通过父组件方法再传递回来
     onCheck = (checkedKeys) => {
+        console.log(checkedKeys)
         this.props.patchMenuInfo(checkedKeys);
     };
     renderTreeNodes = (data,key='') => {
@@ -326,6 +328,7 @@ class PermEditForm extends Component {
             if (item.children) {
                 return (
                     <TreeNode title={item.title} key={parentKey} dataRef={item} className="op-role-tree">
+                        {/* 递归调用 */}
                         {this.renderTreeNodes(item.children,parentKey)}
                     </TreeNode>
                 );
@@ -350,7 +353,7 @@ class PermEditForm extends Component {
     }
 
     render() {
-        const { getFieldDecorator } = this.props.form;
+        const { getFieldDecorator } = this.props.form; // 实现双向数据绑定
         const formItemLayout = {
             labelCol: {span: 5},
             wrapperCol: {span: 18}

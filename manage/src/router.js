@@ -58,6 +58,7 @@ export default class IRouter extends Component {
         return (
             <Router>
                 <App>
+                    <Switch>
                     <Route path="/login" component={Login}/>
                     {/* <Route path="/admin" component={Admin}/> */}
                     <Route path="/common" render={() =>
@@ -65,34 +66,35 @@ export default class IRouter extends Component {
                             <Route path="/common/order/detail/:orderId" component={OrderDetail} />
                         </Common>
                     }/>
-                    <Route path="/admin" render={() => 
+                    <Route path="/" render={() => 
                         <Admin>
                             <Switch>
-                                <Route path="/admin/ui/buttons" component={Buttons}></Route>
-                                <Route path="/admin/ui/modals" component={Modals}></Route>
-                                <Route path="/admin/ui/loadings" component={Loadings}></Route>
-                                <Route path="/admin/ui/notification" component={Notification}></Route>
-                                <Route path="/admin/ui/messages" component={Messages}></Route>
-                                <Route path="/admin/ui/tabs" component={Tabs}></Route>
-                                <Route path="/admin/ui/gallery" component={Gallery}></Route>
-                                <Route path="/admin/ui/carousel" component={Carousels}></Route>
-                                <Route path="/admin/form/login" component={FormLogin}></Route>
-                                <Route path="/admin/form/reg" component={FormRegistery}></Route>
-                                <Route path="/admin/table/basic" component={BasicTable}></Route>
-                                <Route path="/admin/table/high" component={HighTable}></Route>
-                                <Route path="/admin/rich" component={RichText}></Route>
-                                <Route path="/admin/city" component={City}></Route>
-                                <Route path="/admin/order" component={Order} />
-                                <Route path="/admin/user" component={User}></Route>
-                                <Route path="/admin/bikeMap" component={BikeMap}></Route>
-                                <Route path="/admin/charts/bar" component={Bar}></Route>
-                                <Route path="/admin/charts/line" component={Line}></Route>
-                                <Route path="/admin/charts/pie" component={Pie}></Route>
-                                <Route path="/admin/permission" component={Permission}></Route>
+                                <Route path="/ui/buttons" component={Buttons}></Route>
+                                <Route path="/ui/modals" component={Modals}></Route>
+                                <Route path="/ui/loadings" component={Loadings}></Route>
+                                <Route path="/ui/notification" component={Notification}></Route>
+                                <Route path="/ui/messages" component={Messages}></Route>
+                                <Route path="/ui/tabs" component={Tabs}></Route>
+                                <Route path="/ui/gallery" component={Gallery}></Route>
+                                <Route path="/ui/carousel" component={Carousels}></Route>
+                                <Route path="/form/login" component={FormLogin}></Route>
+                                <Route path="/form/reg" component={FormRegistery}></Route>
+                                <Route path="/table/basic" component={BasicTable}></Route>
+                                <Route path="/table/high" component={HighTable}></Route>
+                                <Route path="/rich" component={RichText}></Route>
+                                <Route path="/city" component={City}></Route>
+                                <Route path="/order" component={Order} />
+                                <Route path="/user" component={User}></Route>
+                                <Route path="/bikeMap" component={BikeMap}></Route>
+                                <Route path="/charts/bar" component={Bar}></Route>
+                                <Route path="/charts/line" component={Line}></Route>
+                                <Route path="/charts/pie" component={Pie}></Route>
+                                <Route path="/permission" component={Permission}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
                     } />
+                    </Switch>
                 </App>
             </Router>
         )

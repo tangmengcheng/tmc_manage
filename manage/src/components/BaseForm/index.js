@@ -43,7 +43,7 @@ class FilterForm extends Component {
                         }
                     </FormItem>;
                     formItemList.push(end_time)
-                }else if(item.type == 'INPUT'){
+                }else if(item.type === 'INPUT'){
                     const INPUT = <FormItem label={label} key={field}>
                         {
                             getFieldDecorator([field],{
@@ -54,7 +54,7 @@ class FilterForm extends Component {
                         }
                     </FormItem>;
                     formItemList.push(INPUT)
-                } else if (item.type == 'SELECT') {
+                } else if (item.type === 'SELECT') {
                     const SELECT = <FormItem label={label} key={field}>
                         {
                             getFieldDecorator([field], {
@@ -70,7 +70,7 @@ class FilterForm extends Component {
                         }
                     </FormItem>;
                     formItemList.push(SELECT)
-                } else if (item.type == 'CHECKBOX') {
+                } else if (item.type === 'CHECKBOX') {
                     const CHECKBOX = <FormItem label={label} key={field}>
                         {
                             getFieldDecorator([field], {

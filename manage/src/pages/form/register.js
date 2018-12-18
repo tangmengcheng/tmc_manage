@@ -193,7 +193,7 @@ class FormRegister extends Component {
                                         onChange={this.handleChange}
                                     >
                                         {
-                                            this.state.userImg ? <img src={this.state.userImg}/> : <Icon type="plus" />
+                                            this.state.userImg ? <img src={this.state.userImg} alt="图片" /> : <Icon type="plus" />
                                         }
                                     </Upload>
                                 )
@@ -202,7 +202,7 @@ class FormRegister extends Component {
                         <FormItem {...offsetLayout}>
                             {
                                 getFieldDecorator('userImg')(
-                                   <Checkbox>我已阅读过<a href="#">慕课协议</a></Checkbox>
+                                   <Checkbox>我已阅读过<a href="http://www.baidu.com">慕课协议</a></Checkbox>
                                 )
                             }
                         </FormItem>

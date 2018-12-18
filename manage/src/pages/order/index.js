@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Card, Button, Table, Form, message, Modal } from 'antd';
 import BaseForm from '../../components/BaseForm';
 import axios from './../../axios/index.js';
-import Util from './../../util/util.js';
+// import Util from './../../util/util.js';
 
 const FormItem = Form.Item;
 
@@ -44,7 +44,7 @@ export default class Order extends Component {
         this.requestList()
     }
     requestList = ()=>{
-        let that = this;
+        // let that = this;
         axios.requestList(this, '/order/list', this.params, true)
         // axios.ajax({
         //     url:'/order/list',
@@ -104,7 +104,7 @@ export default class Order extends Component {
                 }
             }
         }).then((res)=>{
-            if(res.code ==0 ){
+            if(res.code === 0 ){
                 this.setState({
                     orderInfo:res.result,
                     orderConfirmVisble: true
@@ -124,7 +124,7 @@ export default class Order extends Component {
                 }
             }
         }).then((res) => {
-            if (res.code == 0) {
+            if (res.code === 0) {
                 message.success('订单结束成功')
                 this.setState({
                     orderConfirmVisble: false
