@@ -113,7 +113,7 @@ const menuList = [
             },
             {
                 title: '折线图',
-                key: 'charts/line'
+                key: '/charts/line'
             },
         ]
     },
