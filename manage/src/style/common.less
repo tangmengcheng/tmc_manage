@@ -1,4 +1,20 @@
+@import './loading.less';
 
+body {
+    background: #f1f3f5;
+    font-family: "Helvetica Neue For Number", "PingFang SC Light", "Heiti SC", "San Francisco", "Helvetica", Arial, sans-serif;
+}
+ul,li{
+list-style: none;
+}
+.clearfix{
+    &:after{
+        content:" ";
+        clear:both;
+        display:block;
+        visibility:hidden;
+    }
+}
 .container {
     display: flex;
     .nav-left {
@@ -17,5 +33,19 @@
             padding: 20px;
         }
     }
-    
+}
+
+.content-wrap{
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    margin-top: -3px;
+    .ant-table-wrapper{
+        margin-left: -1px;
+        margin-right: -2px;
+    }
+}
+.ant-card{
+    button{
+        margin-right: 10px;
+    }
 }
