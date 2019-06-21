@@ -36,14 +36,15 @@ class Header extends Component {
             }
         })
     }
-    
+
     render() {
         const { menuName, menuType } = this.props;
+        console.log(menuType);
         return(
             <div className="header">
                 <Row className="header-top">
                     {
-                        menuType ? 
+                        menuType ?
                         <Col span="6" className="logo">
                             <img src="/assets/logo-ant.svg" alt=""/>
                             <span>IMooc 通用管理系统</span>
@@ -52,7 +53,7 @@ class Header extends Component {
                     <Col span={menuType ? 18 : 24}>
                         <span>欢迎, {this.state.userName}</span>
                         <a href="http://www.baidu.com">退出</a>
-                    </Col> 
+                    </Col>
                 </Row>
                 {
                     menuType ? '' :
@@ -64,7 +65,7 @@ class Header extends Component {
                             <span className="date">{this.state.sysTime}</span>
                             <span className="weather-default">{this.state.weather}</span>
                         </Col>
-                    </Row> 
+                    </Row>
                 }
             </div>
         )
@@ -72,6 +73,7 @@ class Header extends Component {
 }
 // 从redux中获取值
 const mapStateToProps = state => {
+    console.log(state);
     return {
         menuName: state.menuName
     }
